@@ -1,8 +1,12 @@
-export interface Task{
+export class Task{
     id:string;
     title:string;
     description:string;
     status:TaskStatus;
+
+    static getTaskStatus():String[]{
+        return Object.values(TaskStatus)
+    }
 }
 
 
