@@ -21,11 +21,7 @@ export class TasksController {
 
     @Get('/:id')
     getTaskById(@Param('id') id: string){
-        let found =  this.tasksService.getTaskById(id);
-        if(!found){
-            throw new NotFoundException(`Task with id:${id} not found`);
-        }
-        return found;
+        return this.tasksService.getTaskById(id);
     }
     @Post()
     @UsePipes(ValidationPipe)
