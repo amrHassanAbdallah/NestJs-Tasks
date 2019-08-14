@@ -1,2 +1,6 @@
+server:
+  origin:
+    - 'http://somewhere'
+
 db:
   synchronize: false
