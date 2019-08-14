@@ -1,6 +1,9 @@
+import * as config from 'config';
+
+const jwtConfig = config.get('jwt');
 export const JwtConfig = {
-    secret: "tpldkf;lsdkf;dsf",
+    secret: process.env.JWT_SECRET||jwtConfig.secret,
     signOptions:{
-        expiresIn:3600
+        expiresIn: jwtConfig.expiresIn
     }
 }
