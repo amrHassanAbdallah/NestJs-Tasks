@@ -7,7 +7,7 @@ import * as bcrypt from 'bcrypt';
 
 @EntityRepository(User)
 export class UserRepository extends Repository<User>{
-    private const logger = new Logger("UserRepository");
+    private logger = new Logger("UserRepository");
 
     async signUp(authCredentialsDto:AuthCredentialsDto):Promise<void>{
         const {username, password} = authCredentialsDto;
