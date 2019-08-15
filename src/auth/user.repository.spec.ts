@@ -30,12 +30,12 @@ describe('UserRepository', () => {
         });
         it('throws a conflict exception when username already exists', () => {
             save.mockRejectedValue({code:'23505'});
-            expect(userRepository.signUp(mockAuthCredentialsDto)).rejects.toThrow(ConflictException);
+            expect(userRepository.signUp(mockAuthCredentialsDto)).rejects.toThrowError(ConflictException);
         });
         
         it('throws anyother error', () => {
             save.mockRejectedValue({ code: '235015' });
-            expect(userRepository.signUp(mockAuthCredentialsDto)).rejects.toThrow(InternalServerErrorException);
+            expect(userRepository.signUp(mockAuthCredentialsDto)).rejects.toThrowError(InternalServerErrorException);
         });
     });
  
