@@ -40,7 +40,7 @@
     "rxjs": "^6.3.3",
     "swagger-ui-express": "^4.0.7",
     "ts-node": "8.1.0",
-    "typeorm": "^0.2.18",
+    "typeorm": "^0.2.25",
     "typescript": "3.4.3"
   },
   "devDependencies": {
